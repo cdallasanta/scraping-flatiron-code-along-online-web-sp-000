@@ -14,6 +14,11 @@ class Scraper
   end
 
   def make_courses
-
+    get_courses.each do |post|
+      new_course = Course.new
+      new_course.title = post.css("")
+      new_course.schedule = post.css("")
+      new_course.description = post.css("")
+    end
   end
 end
