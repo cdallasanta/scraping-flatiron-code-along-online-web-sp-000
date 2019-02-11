@@ -7,4 +7,5 @@ class Course
     @schedule = schedule
     @description = desc
     @@all << self
+  end
 end
